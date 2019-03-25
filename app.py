@@ -8,7 +8,7 @@ app = Flask(__name__)
 simpleResponseData = '{"status": 200, "response": "Success!"}'
 
 
-@app.route('/app/api')
+@app.route('/app/api', methods=['GET', 'POST'])
 def firebaseApi():
     time.sleep(5)
     return jsonify(json.loads(simpleResponseData))
